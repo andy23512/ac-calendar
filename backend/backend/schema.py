@@ -1,12 +1,18 @@
 from graphene import ObjectType, Schema
+import ac_calendar.schema
 
 
-class Query(ObjectType):
+class Query(
+    ac_calendar.schema.Query,
+    ObjectType
+):
     pass
 
 
-class Mutation(ObjectType):
+class Mutation(
+    ObjectType
+):
     pass
 
 
-schema = Schema(query=Query, mutation=Mutation)
+schema = Schema(query=Query)
