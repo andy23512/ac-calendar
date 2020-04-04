@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ac_calendar'
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,4 @@ CSRF_COOKIE_NAME = 'ac-calendar-csrf'
 GRAPHENE = {
     'SCHEMA': 'backend.schema.schema'
 }
-  
+
