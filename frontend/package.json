@@ -66,6 +66,7 @@
     "@angular/cli": "8.3.14",
     "@angular/compiler-cli": "^8.2.0",
     "@angular/language-service": "^8.2.0",
+    "@graphql-codegen/add": "^1.13.5",
     "@ngxs/schematics": "^0.0.1-alpha.5",
     "@nrwl/cypress": "8.9.0",
     "@nrwl/jest": "8.9.0",

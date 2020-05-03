@@ -9,6 +9,12 @@ import {
   HttpClient,
   HttpClientXsrfModule
 } from '@angular/common/http';
+import {
+  MatToolbarModule,
+  MatListModule,
+  MatIconModule
+} from '@angular/material';
+import { CommonModule } from '@angular/common';
 
 export function getCsrf(http: HttpClient) {
   return () => http.get('/api/csrf').toPromise();
@@ -18,13 +24,17 @@ export function getCsrf(http: HttpClient) {
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     GraphQLModule,
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'ac-calendar-csrf',
       headerName: 'X-CSRFToken'
-    })
+    }),
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [
     {
