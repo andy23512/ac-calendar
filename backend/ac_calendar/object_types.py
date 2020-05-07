@@ -11,4 +11,4 @@ class CategoryType(DjangoObjectType):
 class WorkType(DjangoObjectType):
     class Meta:
         model = Work
-        fields = ('name', 'next_episode', 'notes',)
+        fields = ('name', 'next_episode_date', 'next_episode', 'notes',)

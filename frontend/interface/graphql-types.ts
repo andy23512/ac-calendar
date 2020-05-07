@@ -9,6 +9,7 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
+  Date: any;
 };
 
 
@@ -21,6 +22,7 @@ export type CategoryType = {
   works: Array<WorkType>;
 };
 
+
 export type Query = {
    __typename?: 'Query';
   categories?: Maybe<Array<Maybe<CategoryType>>>;
@@ -29,6 +31,7 @@ export type Query = {
 export type WorkType = {
    __typename?: 'WorkType';
   name: Scalars['String'];
+  nextEpisodeDate?: Maybe<Scalars['Date']>;
   nextEpisode: Scalars['Int'];
   notes: Scalars['String'];
 };

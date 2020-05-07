@@ -13,5 +13,6 @@ class Category(UUIDModel, TimeStampedModel):
 class Work(UUIDModel, TimeStampedModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='works')
     name = models.CharField(max_length=100)
+    next_episode_date = models.DateField(null=True)
     next_episode = models.IntegerField()
     notes = models.TextField(max_length=100)
