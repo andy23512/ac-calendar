@@ -1,6 +1,6 @@
 from graphene import ObjectType
 from .queries import CategoryQuery
-from .mutations import WorkMutation
+from .mutations import WorkMutation, NextEpisodeMutation
 
 
 class Query(
@@ -12,3 +12,4 @@ class Query(
 
 class Mutation(ObjectType):
     work_mutation = WorkMutation.Field()
+    next_episode_mutation = NextEpisodeMutation.Field()

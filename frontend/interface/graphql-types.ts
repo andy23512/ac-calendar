@@ -32,11 +32,22 @@ export type ErrorType = {
 export type Mutation = {
    __typename?: 'Mutation';
   workMutation?: Maybe<WorkMutationPayload>;
+  nextEpisodeMutation?: Maybe<NextEpisodeMutation>;
 };
 
 
 export type MutationWorkMutationArgs = {
   input: WorkMutationInput;
+};
+
+
+export type MutationNextEpisodeMutationArgs = {
+  id: Scalars['ID'];
+};
+
+export type NextEpisodeMutation = {
+   __typename?: 'NextEpisodeMutation';
+  work?: Maybe<WorkType>;
 };
 
 export type Query = {
