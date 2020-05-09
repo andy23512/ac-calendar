@@ -10,9 +10,10 @@ class Query(
 
 
 class Mutation(
+    ac_calendar.schema.Mutation,
     ObjectType
 ):
     pass
 
 
-schema = Schema(query=Query)
+schema = Schema(query=Query, mutation=Mutation)

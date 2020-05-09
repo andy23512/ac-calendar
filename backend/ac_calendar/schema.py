@@ -1,5 +1,6 @@
 from graphene import ObjectType
 from .queries import CategoryQuery
+from .mutations import WorkMutation
 
 
 class Query(
@@ -10,4 +11,4 @@ class Query(
 
 
 class Mutation(ObjectType):
-    pass
+    work_mutation = WorkMutation.Field()

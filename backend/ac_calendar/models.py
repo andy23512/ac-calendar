@@ -15,4 +15,6 @@ class Work(UUIDModel, TimeStampedModel):
     name = models.CharField(max_length=100)
     next_episode_date = models.DateField(null=True)
     next_episode = models.IntegerField()
+    period = models.CharField(max_length=10, choices=(('weekly', 'weekly'), ('monthly', 'monthly')), null=True)
     notes = models.TextField(max_length=100)
+    is_ended = models.BooleanField(default=True)
